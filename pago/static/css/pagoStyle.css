@@ -2,5 +2,9 @@
     text-align: center;
 }
 #containerGlobal{
-    margin-top: 8%;
+    margin-top: 2%;
+}
+.alerta{
+    width: fit-content;
+    margin: 0 auto;
 }
