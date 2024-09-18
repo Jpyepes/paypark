@@ -1,0 +1,22 @@
+.contenedor {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: xx-large !important;
+}
+
+.form_div {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#idPersona {
+  border-color: black;
+}
+
+.alerta {
+  width: fit-content;
+  margin: 0 auto;
+}
