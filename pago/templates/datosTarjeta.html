@@ -23,10 +23,10 @@
           <div class=" collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link mx-2" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link mx-2 {% if request.path == ' ' %}active{% endif %}" href="{% url 'landing' %}">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="#">Sobre nosotros</a>
+                <a class="nav-link mx-2 {% if request.path == '/sobreNosotros/' %}active{% endif %}" href="{% url 'sobre_nosotros' %}">Sobre nosotros</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-2 {% if request.path == '/datosPago/' %}active{% endif %}" href="{% url 'datosPago' %}">Pago de parqueadero</a>
@@ -56,7 +56,7 @@
                             <!-- Número de Tarjeta -->
                             <div class="mb-3">
                                 <label for="numeroTarjeta" class="form-label">Número de Tarjeta:</label>
-                                <input type="text" class="form-control" id="numeroTarjeta" placeholder="1234 5678 9123 4567" required>
+                                <input type="number" class="form-control" id="numeroTarjeta" placeholder="1234 5678 9123 4567" required>
                             </div>
 
                             <!-- Fecha de Expiración y CVV -->
