@@ -29,7 +29,7 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                  <a class="nav-link mx-2 {% if request.path == ' ' %}active{% endif %}" href="{% url 'landing' %}">Inicio</a>
+              <a class="nav-link mx-2 {% if request.path == ' ' %}active{% endif %}" href="{% url 'landing' %}">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-2 {% if request.path == '/sobreNosotros/' %}active{% endif %}" href="{% url 'sobre_nosotros' %}">Sobre nosotros</a>
@@ -38,7 +38,7 @@
               <a class="nav-link mx-2 {% if request.path == '/datosPago/' %}active{% endif %}" href="{% url 'datosPago' %}">Pago de parqueadero</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-2" href="#">IA</a>
+              <a class="nav-link mx-2" href="{% url 'ia' %}">IA</a>
             </li>
           </ul>
         </div>
@@ -59,13 +59,13 @@
       <h1 class="text-center mb-3 mt-2">Verifica tu saldo</h1>
 
       <div class="alert alert-warning text-center alerta" role="alert">
-        Recuerda que el costo del parqueadero es de $7.000 pesos !!
+        <strong>Recuerda que el costo del parqueadero es de $7.000 pesos</strong>
       </div>
       <div class="form_div mb-3">
         <form>
-          <label for="exampleInputEmail1" class="form-label">Ingrese su cedula</label>
+          <label class="form-label label_form">Ingrese su cedula</label>
           <input type="number" name="cedula" class="form-control" id="idPersona" required>
-          <button type="submit" class="btn btn-success mt-2 mb-3">Buscar</button>
+          <button type="submit" class="btn btn-success mt-2 mb-3">Consultar</button>
         </form>
       </div>
     </div>
