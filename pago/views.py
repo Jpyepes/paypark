@@ -6,3 +6,6 @@ def landing(request):
 
 def sobre_nosotros(request):
   return render(request, 'sobre_nosotros.html')
+
+def ia(request):
+  return render(request, 'ia.html')

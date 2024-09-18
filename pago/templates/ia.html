@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style_ia.css' %}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <title>Inteligencia Artificial</title>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>PayPark</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="{% url 'landing' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="{% url 'sobre_nosotros' %}">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#">Pago de parqueadero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="{% url 'ia' %}">IA</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="contenedor">
+    <h1 class="text-center mb-5">Inteligencia Artificial</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h5 class="card-title text-center titulo_card">Predicción de horas de menor ingreso vehicular</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Los horarios en los que el ingreso del parqueadero va a ser más rapido son:
+              <br>
+              <br>
+              <strong>Horarios:</strong>
+              <br>
+              ° 6:00 am a 8:45 am
+              <br>
+              ° 10:35 am a 11:24 am
+              <br>
+              ° 12:23 pm a 3:00 pm
+              <br>
+              ° 6:24 pm a 9:00 pm
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h5 class="card-title text-center titulo_card">Predicción del mejor parqueadero</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Actualmente, el parqueadero con menor ocupación y el acceso más rápido es el:
+              <br><br><strong>Parqueadero de IDIOMAS</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-header bg-dark">
+            <h5 class="card-title text-center titulo_card">Predicción mejor punto fisico para pagar</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Actualmente, el punto de pago fisico más vacio y habilitado es:
+              <br><br><strong>Punto de pago del bloque 20</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
