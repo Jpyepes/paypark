@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from pago import views as viewsPago
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', viewsPago.landing, name='landing'),
+    path('sobreNosotros/', viewsPago.sobre_nosotros, name='sobre_nosotros')
 ]
