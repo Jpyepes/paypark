@@ -29,9 +29,6 @@
                 <a class="nav-link mx-2 {% if request.path == '/sobreNosotros/' %}active{% endif %}" href="{% url 'sobre_nosotros' %}">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2 {% if request.path == '/datosPago/' %}active{% endif %}" href="{% url 'datosPago' %}">Pago de parqueadero</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link mx-2 {% if request.path == '/ia/' %}active{% endif %}" href="{% url 'ia' %}">IA</a>
               </li>
             </ul>
@@ -39,6 +36,17 @@
         </div>
       </nav>
     <div class="container mt-5">
+        <h2 class="text-center">Información del usuario</h2>
+        <h5 class="text-center mt-5">Número de documento: {{usuario.cedula}}</h5>
+        <h5 class="text-center">Saldo actual: {{usuario.saldo}}</h5>
+        {% if usuario.fecha_registro != null %}
+        <h5 class="text-center">Fecha última recarga: {{usuario.fecha_registro}}</h5>
+        {% endif %}
+        {% if bandera %}
+        <div class="alert alert-success text-center alerta mt-4" role="alert">
+          <strong>¡Recarga Exitosa!</strong>
+        </div>
+        {% endif %}
         <div class="row justify-content-center" id="containerGlobal">
             <div class="col-md-6">
                 <div class="card shadow">
@@ -46,7 +54,8 @@
                         <h4 class="mb-0" id="tituloPago">Pago con Tarjeta de Crédito</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST">
+                          {% csrf_token %}
                             <!-- Nombre del Titular -->
                             <div class="mb-3">
                                 <label for="nombreTitular" class="form-label">Nombre del Titular:</label>
