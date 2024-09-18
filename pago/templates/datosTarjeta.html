@@ -32,7 +32,7 @@
                 <a class="nav-link mx-2 {% if request.path == '/datosPago/' %}active{% endif %}" href="{% url 'datosPago' %}">Pago de parqueadero</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="#">IA</a>
+                <a class="nav-link mx-2 {% if request.path == '/ia/' %}active{% endif %}" href="{% url 'ia' %}">IA</a>
               </li>
             </ul>
           </div>
